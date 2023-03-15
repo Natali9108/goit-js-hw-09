@@ -16,3 +16,48 @@ img {
   display: block;
   max-width: 100%;
 }
+
+#datetime-picker {
+  margin-left: 20px;
+  padding: 5px;
+  text-align: center;
+  font-size: 26px;
+  border-radius: 5px;
+  border-color: rgba(9, 12, 9, 0.856);
+}
+
+button {
+  height: 45px;
+  width: 100px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:enabled {
+  background-color: rgba(178, 226, 178, 0.712);
+  border: 1px solid green;
+}
+
+button:disabled {
+  background-color: rgb(235, 230, 230);
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.field {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.value {
+  font-weight: 600;
+}

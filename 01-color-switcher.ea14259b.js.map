@@ -1,0 +1,1 @@
+{"mappings":"YAAA,MAAMA,EAAO,IAAIC,KACjBC,QAAQC,IAAIH,E","sources":["src/js/01-color-switcher.js"],"sourcesContent":["const date = new Date();\nconsole.log(date);\n// console.log(date.getTime());\n"],"names":["$2ec2bf6e450c0fe9$var$date","Date","console","log"],"version":3,"file":"01-color-switcher.ea14259b.js.map"}

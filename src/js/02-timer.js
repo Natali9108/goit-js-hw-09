@@ -11,6 +11,7 @@ const refs = {
   labelSpan: document.querySelectorAll('.label'),
 };
 
+let intervalId = null;
 refs.startBtn.disabled = true;
 
 const options = {
@@ -36,21 +37,20 @@ function checkSelecteddate(data) {
   return;
 }
 
+function timer() {
+  const startTime = new Date(fp.selectedDates[0]);
+  const deltaTime = startTime - Date.now();
+  const time = convertMs(deltaTime);
+
+  if (deltaTime <= 0) {
+    clearInterval(intervalId);
+    return;
+  }
+  updateTimerFace(time);
+}
+
 function handelSetTimer() {
-  const timer = {
-    start() {
-      const startTime = new Date(fp.selectedDates[0]);
-
-      setInterval(() => {
-        const currentTime = new Date();
-        const deltaTime = startTime - currentTime;
-        const time = convertMs(deltaTime);
-        updateTimerFace(time);
-      }, 1000);
-    },
-  };
-
-  timer.start();
+  intervalId = setInterval(timer, 1000);
 }
 
 function updateTimerFace({ days, hours, minutes, seconds }) {

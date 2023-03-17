@@ -26,7 +26,7 @@ img {
   border-color: rgba(9, 12, 9, 0.856);
 }
 
-button {
+button[data-start] {
   height: 45px;
   width: 100px;
   margin-left: 10px;
@@ -38,7 +38,7 @@ button {
   cursor: pointer;
 }
 
-button:enabled {
+button[data-start]:enabled {
   background-color: rgba(178, 226, 178, 0.712);
   border: 1px solid green;
 }

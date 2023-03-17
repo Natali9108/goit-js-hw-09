@@ -26,7 +26,8 @@ img {
   border-color: rgba(9, 12, 9, 0.856);
 }
 
-button[data-start] {
+button[data-start],
+button[data-stop] {
   height: 45px;
   width: 100px;
   margin-left: 10px;

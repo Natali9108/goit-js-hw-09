@@ -15,7 +15,6 @@ const changeBodyColor = {
     refs.stopBtn.disabled = false;
     this.intervalId = setInterval(() => {
       refs.body.style.backgroundColor = getRandomHexColor();
-      refs.startBtn.disabled = true;
     }, 1000);
   },
 

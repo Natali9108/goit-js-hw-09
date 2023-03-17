@@ -9,14 +9,8 @@ refs.stopBtn.addEventListener('click', handelStopBtn);
 
 const changeBodyColor = {
   intervalId: null,
-  isActive: false,
 
   start() {
-    if (this.isActive) {
-      return;
-    }
-
-    this.isActive = true;
     refs.startBtn.disabled = true;
     refs.stopBtn.disabled = false;
     this.intervalId = setInterval(() => {
@@ -27,7 +21,6 @@ const changeBodyColor = {
 
   stop() {
     clearInterval(this.intervalId);
-    this.isActive = false;
     refs.startBtn.disabled = false;
     refs.stopBtn.disabled = true;
   },
